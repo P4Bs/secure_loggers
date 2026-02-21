@@ -1,8 +1,11 @@
+from Features.Account.modify_username import modify_username
 from Features.Auth.log_user import log_in_user
 from Loggers.TableLoggers.log_error_event import log_error_event
 
+
 def test_log_to_database():
     log_in_user('test_user', 'this_password_does_not_matter')
+
 
 def function_that_produces_exception():
     value: float
@@ -14,5 +17,7 @@ def function_that_produces_exception():
 
     print(value)
 
+
+modify_username("Pepe Antonio")
 test_log_to_database()
 function_that_produces_exception()

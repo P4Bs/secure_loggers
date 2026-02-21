@@ -1,3 +1,4 @@
 INFO = "INFO"
 DEBUG = "DEBUG"
 ERROR = "ERROR"
+EVENT_LOGS = "event_logs"
