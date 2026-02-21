@@ -23,8 +23,7 @@ SQLite as it is a lightweight Database Management System, which is perfect for t
 There are two tables: for general logs the **application_logs** table and for errors the **error_logs** table.
 
 ### Structure of application_logs table
-```
-    sql
+```sql
 CREATE TABLE "application_logs" (
 	"id"	INTEGER,
 	"date"	TEXT NOT NULL DEFAULT 'DATE(''now'')',
@@ -43,8 +42,7 @@ CREATE TABLE "application_logs" (
 
 ### Structure of error_logs table
 
-```
-    sql
+```sql
 CREATE TABLE "error_logs" (
 	"id"	INTEGER UNIQUE,
 	"date"	TEXT NOT NULL DEFAULT 'DATE(''now'')',
