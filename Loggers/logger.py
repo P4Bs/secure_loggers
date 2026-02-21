@@ -5,12 +5,8 @@
 # Definir el logger con decoradores
 # trazar llamadas entre funciones
 
-import logging
-
-import file_logger
-from constants import INFO
-from file_logger import info_file_logger
-from log_to_database import secure_log_function_call
+from Constants.constants import INFO
+from Loggers.TypeLoggers.log_application_event import log_application_event
 
 
 # def setup_logger(logger_name, log_file, level=logging.INFO):
@@ -39,14 +35,7 @@ def log_call(logger):
         def func_wrapper(*args, **kwargs):
             logger.log_info(f'Function {func.__name__} called with args: {args}, kwargs: {kwargs}')
             return func(*args, **kwargs)
+
         return func_wrapper
+
     return log_function_call
-
-
-@log_call(file_logger.info_file_logger)
-def log_user_login_to_file(username: str, password: str):
-   print(f'Login user {username} with password {password}')
-
-@secure_log_function_call(level=INFO)
-def log_in_user(username: str, password: str):
-    print(f'Login user {username} with password {password}')
