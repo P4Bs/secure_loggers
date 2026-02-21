@@ -1,12 +1,5 @@
-"""
-    Author: Pablo Jesús Moreno Polo
-    error_log Python module
-
-    This file defines the class for the database table error_logs on the logging Database.
-"""
-
 import datetime
-from base import Base
+from Classes.base import Base
 from sqlalchemy.orm import Mapped, mapped_column
 from typing import Any
 

@@ -1,11 +1,5 @@
-"""
-    main Python module
-
-    This is the entry point of the Python project. It serves as a showcase of both the file logger and the database
-    logger.
-"""
 from Features.Auth.log_user import log_in_user
-from Loggers.TypeLoggers.log_error_event import log_error_event
+from Loggers.TableLoggers.log_error_event import log_error_event
 
 def test_log_to_database():
     log_in_user('test_user', 'this_password_does_not_matter')
@@ -20,5 +14,5 @@ def function_that_produces_exception():
 
     print(value)
 
-
+test_log_to_database()
 function_that_produces_exception()

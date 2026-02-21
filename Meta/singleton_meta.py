@@ -1,8 +1,3 @@
-"""
-    Author: Pablo Jesús Moreno Polo
-
-    This file defines a metaclass for the singleton software pattern
-"""
 from threading import Lock
 
 

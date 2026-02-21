@@ -1,9 +1,3 @@
-"""
-
-    The secure_log function is a function wrapper that provides the functionality to log function calls to the function
-    to which the wrapper is applied to.
-"""
-
 import datetime
 import functools
 import inspect
@@ -27,7 +21,7 @@ def log_application_event(level: str, message: str = None):
                 line_number=caller_traceback.lineno,
                 function_name=caller_traceback.function,
                 code_line=caller_traceback.code_context[0] if caller_traceback.code_context else None,
-                process_id=os.getpid(),
+                pid=os.getpid(),
                 thread_name=threading.current_thread().name,
                 message=message
             )
